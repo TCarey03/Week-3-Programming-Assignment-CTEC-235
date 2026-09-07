@@ -1,21 +1,22 @@
 import 'Product.dart';
+import 'Bundle.dart';
 
 void main() {
-  // Regular constructor
+  // Regular product
   Product regularProduct = Product(
     name: "Wireless Mouse",
     basePrice: 30.00,
     stockQuantity: 15,
   );
 
-  // On-sale constructor
+  // Sale product
   Product saleProduct = Product.onSale(
     name: "Gaming Keyboard",
     basePrice: 80.00,
     stockQuantity: 5,
   );
 
-  // Bulk constructor
+  // Bulk product
   Product bulkProduct = Product.bulk(
     name: "USB Cables",
     basePrice: 10.00,
@@ -39,4 +40,14 @@ void main() {
   print("Price: \$${bulkProduct.discountedPrice}");
   print("Stock: ${bulkProduct.stockQuantity}");
   print("Low Stock: ${bulkProduct.isLowStock}");
+
+  // Create a bundle
+  Bundle bundle = Bundle([
+    regularProduct,
+    saleProduct,
+    bulkProduct,
+  ]);
+
+  print("\nBundle:");
+  print("Total Price: \$${bundle.totalPrice}");
 }

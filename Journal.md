@@ -26,3 +26,18 @@ The regular constructor allows me to create a product by providing the normal pr
 I prefer named parameters because they make the code easier to read. For example, name: "Wireless Mouse" makes it clear what value I am passing to the constructor. I also like named constructors because Product.onSale() and Product.bulk() make it obvious what type of product I am creating.
 
 The named constructors also keep the special construction logic inside the Product class instead of making me calculate the values manually every time I create a product.
+
+---------------------------------------------
+
+Phase 3: Expanding the Ecosystem
+Prompt
+
+As the number of models grows, how do named parameters and getters help keep the code organized?
+
+Response
+
+As the number of models grows, named parameters make it easier to understand what information is being passed into each constructor. Instead of having to remember the order of several values, I can use names like name, basePrice, and stockQuantity.
+
+Getters also help keep the code organized because they allow calculations and logic to stay inside the class that owns the data. For example, the Product class handles the calculation for discountedPrice, while the Bundle class handles calculating its totalPrice.
+
+This makes the code easier to read and helps prevent duplicate calculations throughout the program. If I need to change how a value is calculated, I can make the change inside the appropriate class instead of changing it everywhere the value is used.
